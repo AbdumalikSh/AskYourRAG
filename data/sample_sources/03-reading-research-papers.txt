@@ -1,0 +1,29 @@
+ASK YOUR PDFs | A NOTE ON READING RESEARCH PAPERS
+An original sample document for the Folio demo collection
+
+1. Begin with a question
+Research papers are easier to read when the reader has a purpose. Before reading every section closely, write down the question you hope the paper will answer. It might concern the task, the data, the method, the evaluation, or the limits of a result. A clear question helps distinguish the paper's main contribution from background detail.
+
+Start with the title, abstract, and conclusion. The abstract gives a compressed account of the problem and result, but it omits details by design. The conclusion often restates the authors' interpretation and may name limitations or future work. Treat both sections as a map, not as a substitute for the evidence in the paper.
+
+2. Read the problem and method
+The introduction should explain why the question matters and what gap the authors claim to address. Identify the stated contributions and note which are empirical claims, which are design choices, and which are broader interpretations. A claim that a method is “better” is incomplete until the comparison, metric, and evaluation setting are clear.
+
+In the methods section, look for enough detail to understand what was done. Record the data source, selection criteria, preprocessing steps, baseline systems, and evaluation measures. Ask whether the experiment isolates the factor the authors want to study. If data is filtered or labels are constructed, those decisions can affect what the findings mean.
+
+Figures and tables often hold the most concrete evidence. Read their captions and axes, check sample sizes, and compare the reported result to the baseline. A large relative improvement can correspond to a small absolute change. A single aggregate score can hide uneven performance across groups or conditions. The paper's own explanation should be read alongside the displayed numbers.
+
+3. Separate results from interpretation
+A result is an observation under a particular experimental setup. An interpretation explains what the authors think that observation means. A causal conclusion needs a design that can support causal reasoning; correlation alone does not show that one factor produced another. A benchmark result demonstrates performance on that benchmark, not universal usefulness in every setting.
+
+Check whether uncertainty is reported. Confidence intervals, repeated runs, or significance tests may show how stable a result is, although each has assumptions. When a paper compares many systems or settings, look for details about selection and reporting. A careful reader distinguishes a promising result from a fully established conclusion.
+
+4. Place limitations in context
+Limitations are part of the evidence. They might include a narrow sample, a short study period, a particular language, a simulated environment, or a benchmark that does not represent deployment. These constraints do not automatically invalidate the work. They define the situations to which the finding can reasonably be applied.
+
+Look for risks that follow from the method as well as limitations the authors explicitly name. A model trained on historical data may reproduce patterns in that data. A usability study with expert participants may not predict first-time users' experience. A reported average may obscure different outcomes for specific populations. These questions help a reader judge relevance to a new problem.
+
+5. Build a concise reading note
+A useful note records the research question, the central method, the strongest evidence, and the most important limitation. Add page references while reading so that later claims can be checked quickly. Distinguish your own observations from the authors' statements. If you compare several papers, use the same categories for each to make similarities and differences visible.
+
+A disciplined reading note does not need to retell every section. It should help a future reader reconstruct why the paper matters and where its conclusions are supported. When a claim cannot be traced to a figure, method, or cited passage, keep it tentative. Returning to the original page is a normal part of research, not a failure of memory.

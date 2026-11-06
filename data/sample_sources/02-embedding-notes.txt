@@ -1,0 +1,31 @@
+ASK YOUR PDFs | EMBEDDINGS AND SEMANTIC SEARCH
+An original sample document for the Folio demo collection
+
+1. What an embedding represents
+An embedding is a numeric representation of an item, such as a sentence or paragraph. A model learns to map items with related meaning to nearby regions of a vector space. The vector does not store a short English definition of the passage. It is a machine-readable representation that makes comparison possible.
+
+For document search, the same embedding model should encode both stored passages and incoming questions. If a passage says “the system retrieves relevant context before a response is composed” and a question asks “how does RAG find supporting text?”, a semantic model may recognize their relationship even though few words match exactly. The model's training data and architecture shape what kinds of similarity it captures.
+
+2. Similarity and nearest neighbors
+A vector index searches for passage vectors close to a query vector. Cosine similarity compares the angle between vectors; a smaller angle generally indicates a stronger semantic match. Some databases report cosine distance instead, where smaller values mean closer vectors. Applications should confirm how a library defines and returns its scores before interpreting them.
+
+Nearest-neighbor search is a ranking, not a fact check. The first result is merely the most similar result available in the indexed collection. If every passage is unrelated, one of them may still rank first. Relevance thresholds, document filters, and a generation instruction to abstain can reduce unsupported responses, but they require evaluation against real queries.
+
+3. Chunk granularity and overlap
+Passage size affects both retrieval and answer quality. A very short chunk may omit the subject of a sentence. A very long chunk may contain multiple topics, making its embedding less precise. Paragraph-level chunks are often a sensible starting point because paragraphs tend to group related ideas. For long paragraphs, character or token limits provide an upper bound.
+
+Overlapping adjacent chunks preserves context across a boundary. If chunk A ends with a definition and chunk B begins with its explanation, an overlap gives each retrieved passage a little shared context. Excessive overlap stores redundant text, increases database size, and may cause search results to repeat the same passage. Measure chunk length and inspect results instead of choosing overlap by habit.
+
+Page boundaries have an independent purpose: citations. A chunk that crosses a page boundary complicates a page-level citation. Keeping chunks inside page boundaries makes it possible to attach the exact page number at ingestion time. The database can store filename, page, and chunk order as ordinary metadata fields.
+
+4. Vector indexes in practice
+A collection typically stores an identifier, text, metadata, and an embedding. A persistent index writes this data to disk so that the application does not have to rebuild it after every restart. Updating a document should remove or replace the old chunks for that filename; otherwise, obsolete passages can continue to surface alongside the new version.
+
+For a small personal library, exact nearest-neighbor search is often practical and simple. Approximate indexes trade a small amount of search precision for speed on larger corpora. The right choice depends on collection size, latency, memory, and the cost of a missed result. Index configuration is an engineering choice, not a guarantee of semantic correctness.
+
+5. Improve retrieval with evidence
+Start evaluation with a small set of questions whose supporting pages are known. For each question, check whether the expected page appears among the top results. This is retrieval recall. Then inspect whether the passage actually supports the answer. A useful search can fail because the PDF was extracted poorly, the question is vague, the chunk splits the evidence, or the embedding model misses a domain-specific term.
+
+Hybrid retrieval combines semantic similarity with exact lexical search. It can help when documents contain product codes, names, or exact phrases that embeddings alone may not rank highly. Reranking applies a second model to reorder a smaller candidate set. Both techniques add complexity and should be introduced when a measured failure justifies them.
+
+Semantic search is a retrieval tool, not a replacement for sources. Keeping passages and citation metadata together gives readers a path back to the original evidence. A transparent interface that shows the filename and page alongside an answer makes it easier to notice missing or mismatched context.

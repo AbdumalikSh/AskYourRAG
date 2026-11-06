@@ -1,0 +1,29 @@
+ASK YOUR PDFs | A FIELD GUIDE TO RETRIEVAL-AUGMENTED GENERATION
+An original sample document for the Folio demo collection
+
+1. Why retrieval matters
+A language model can write fluent answers, but fluency does not guarantee that an answer reflects a particular book, report, or policy. Retrieval-augmented generation (RAG) connects a language model to a collection of source documents. The system searches for relevant passages, supplies those passages with the user's question, and asks the model to answer from that evidence. This separates finding evidence from composing a response.
+
+A useful RAG answer is traceable. Each retrieved passage should preserve the document name and page number from which its text came. A citation such as [02-embedding-notes.pdf, p. 2] lets a reader return to the original page and check the context. Citations are metadata carried through the pipeline; the model should not invent them.
+
+2. From PDF to searchable passages
+PDFs are designed to preserve layout, not necessarily to expose clean reading order. A text-based PDF often contains extractable words, while a scanned page may contain only an image. Scanned files need optical character recognition before ordinary text retrieval can work. Extraction quality should be checked, especially for columns, footnotes, tables, and unusual fonts.
+
+After extraction, split text into chunks. A chunk should be long enough to contain a complete idea, but short enough that a search result stays focused. A practical starting point is several hundred words, then adjust based on the corpus and embedding model. Split near paragraph or sentence boundaries when possible. A small overlap between neighboring chunks reduces the chance of cutting an important definition or argument in half.
+
+Keep page boundaries explicit. When a chunk belongs to a single PDF page, storing that page number makes citations direct and reliable. If chunks span pages, store the first and last page or create page-level chunks. Preserve the source filename, page, and a stable chunk identifier alongside the text.
+
+3. Embeddings and retrieval
+An embedding model maps a passage to a vector of numbers that represents semantic features. Questions and passages encoded by the same model can be compared in vector space. Similarity search can find a passage that discusses the same idea even when it uses different wording from the question. This is why semantic retrieval complements exact keyword search.
+
+A vector database stores embeddings and associated metadata. At query time, encode the question, request the nearest vectors, and return their text plus metadata. Cosine similarity is a common comparison measure. The number of requested passages, often called top-k, controls the breadth of evidence supplied to generation. A very small k can omit a useful detail. A very large k can introduce unrelated passages and consume more context.
+
+4. Grounded generation and uncertainty
+The generation prompt should say plainly that the retrieved excerpts are the only evidence the model may use. Ask it to cite claims using the supplied filename and page. If evidence is absent or inadequate, the answer should say: “I don’t know based on the provided documents.” This response is more useful than a confident guess.
+
+Retrieval similarity is not proof that a passage supports an answer. A high score can still retrieve a passage that shares vocabulary but addresses a different issue. Applications should inspect source quality, test representative questions, and allow the model to decline when context is insufficient. The user should be able to see the cited sources, not just the polished answer.
+
+5. A practical quality checklist
+Check extraction on short and long pages. Confirm that chunks retain their filename and correct page. Re-index changed files instead of keeping stale chunks. Try questions with direct answers, paraphrased questions, multi-part questions, and questions whose answers are absent. Verify each citation against the original PDF. Track failures such as missing context, inaccurate page numbers, weak OCR, and overly broad chunks.
+
+A small, transparent RAG system can be useful without claiming that retrieval eliminates errors. Its value comes from making source material easier to find while keeping the evidence visible. Good chunking, careful metadata, constrained generation, and honest uncertainty work together; none is a substitute for checking the cited page.

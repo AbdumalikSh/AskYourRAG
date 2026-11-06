@@ -1,0 +1,186 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 3156 >>
+stream
+BT
+/F1 9 Tf
+48 750 Td
+12 TL
+(ASK YOUR PDFs | A NOTE ON READING RESEARCH PAPERS) Tj
+T*
+(An original sample document for the Folio demo collection) Tj
+T*
+() Tj
+T*
+(1. Begin with a question) Tj
+T*
+(Research papers are easier to read when the reader has a purpose. Before reading every section ) Tj
+T*
+(closely, write down the question you hope the paper will answer. It might concern the task, the ) Tj
+T*
+(data, the method, the evaluation, or the limits of a result. A clear question helps distinguish ) Tj
+T*
+(the paper's main contribution from background detail.) Tj
+T*
+() Tj
+T*
+(Start with the title, abstract, and conclusion. The abstract gives a compressed account of the ) Tj
+T*
+(problem and result, but it omits details by design. The conclusion often restates the authors' ) Tj
+T*
+(interpretation and may name limitations or future work. Treat both sections as a map, not as a ) Tj
+T*
+(substitute for the evidence in the paper.) Tj
+T*
+() Tj
+T*
+(2. Read the problem and method) Tj
+T*
+(The introduction should explain why the question matters and what gap the authors claim to ) Tj
+T*
+(address. Identify the stated contributions and note which are empirical claims, which are design ) Tj
+T*
+(choices, and which are broader interpretations. A claim that a method is ?better? is incomplete ) Tj
+T*
+(until the comparison, metric, and evaluation setting are clear.) Tj
+T*
+() Tj
+T*
+(In the methods section, look for enough detail to understand what was done. Record the data ) Tj
+T*
+(source, selection criteria, preprocessing steps, baseline systems, and evaluation measures. Ask ) Tj
+T*
+(whether the experiment isolates the factor the authors want to study. If data is filtered or ) Tj
+T*
+(labels are constructed, those decisions can affect what the findings mean.) Tj
+T*
+() Tj
+T*
+(Figures and tables often hold the most concrete evidence. Read their captions and axes, check ) Tj
+T*
+(sample sizes, and compare the reported result to the baseline. A large relative improvement can ) Tj
+T*
+(correspond to a small absolute change. A single aggregate score can hide uneven performance ) Tj
+T*
+(across groups or conditions. The paper's own explanation should be read alongside the displayed ) Tj
+T*
+(numbers.) Tj
+T*
+() Tj
+T*
+(3. Separate results from interpretation) Tj
+T*
+(A result is an observation under a particular experimental setup. An interpretation explains ) Tj
+T*
+(what the authors think that observation means. A causal conclusion needs a design that can ) Tj
+T*
+(support causal reasoning; correlation alone does not show that one factor produced another. A ) Tj
+T*
+(benchmark result demonstrates performance on that benchmark, not universal usefulness in every ) Tj
+T*
+(setting.) Tj
+T*
+() Tj
+T*
+(Check whether uncertainty is reported. Confidence intervals, repeated runs, or significance ) Tj
+T*
+(tests may show how stable a result is, although each has assumptions. When a paper compares many ) Tj
+T*
+(systems or settings, look for details about selection and reporting. A careful reader ) Tj
+T*
+(distinguishes a promising result from a fully established conclusion.) Tj
+T*
+() Tj
+T*
+(4. Place limitations in context) Tj
+T*
+0 -10 Td
+(Page 1) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 1716 >>
+stream
+BT
+/F1 9 Tf
+48 750 Td
+12 TL
+(Limitations are part of the evidence. They might include a narrow sample, a short study period, ) Tj
+T*
+(a particular language, a simulated environment, or a benchmark that does not represent ) Tj
+T*
+(deployment. These constraints do not automatically invalidate the work. They define the ) Tj
+T*
+(situations to which the finding can reasonably be applied.) Tj
+T*
+() Tj
+T*
+(Look for risks that follow from the method as well as limitations the authors explicitly name. A ) Tj
+T*
+(model trained on historical data may reproduce patterns in that data. A usability study with ) Tj
+T*
+(expert participants may not predict first-time users' experience. A reported average may obscure ) Tj
+T*
+(different outcomes for specific populations. These questions help a reader judge relevance to a ) Tj
+T*
+(new problem.) Tj
+T*
+() Tj
+T*
+(5. Build a concise reading note) Tj
+T*
+(A useful note records the research question, the central method, the strongest evidence, and the ) Tj
+T*
+(most important limitation. Add page references while reading so that later claims can be checked ) Tj
+T*
+(quickly. Distinguish your own observations from the authors' statements. If you compare several ) Tj
+T*
+(papers, use the same categories for each to make similarities and differences visible.) Tj
+T*
+() Tj
+T*
+(A disciplined reading note does not need to retell every section. It should help a future reader ) Tj
+T*
+(reconstruct why the paper matters and where its conclusions are supported. When a claim cannot ) Tj
+T*
+(be traced to a figure, method, or cited passage, keep it tentative. Returning to the original ) Tj
+T*
+(page is a normal part of research, not a failure of memory.) Tj
+T*
+0 -10 Td
+(Page 2) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000323 00000 n 
+0000003531 00000 n 
+0000003657 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+5425
+%%EOF
